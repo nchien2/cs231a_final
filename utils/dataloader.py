@@ -59,7 +59,7 @@ class ASLLVDataset(Dataset):
         # print(f'keypoint_tensor: {keypoint_tensor.shape}')
         frame_keypoints.append(frame_out)
       full_pose = torch.stack(frame_keypoints, dim=0)
-    #   full_pose = augmentations.interpolate_keypoints(full_pose)
+      full_pose = augmentations.interpolate_keypoints(full_pose)
       # print(f'full pose: {full_pose.shape}')
       
 
